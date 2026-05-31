@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: group-location-sharing
+
+  r2dbc:
+    url: r2dbc:h2:mem:///glscdb;DB_CLOSE_DELAY=-1;CASE_INSENSITIVE_IDENTIFIERS=TRUE
+    username: sa
+    password:
+
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
+
+sms:
+  url: http://localhost:8090
